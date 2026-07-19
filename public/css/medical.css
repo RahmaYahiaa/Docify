@@ -1,0 +1,508 @@
+/* ==========================================================================
+   RESET & SYSTEM FONTS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F8FAFC; 
+    color: #1E293B;
+    -webkit-font-smoothing: antialiased;
+    padding: 32px;
+}
+
+.page-container {
+    width: 100%;      
+    max-width: 100%;   
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ==========================================================================
+   HEADER BANNER
+   ========================================================================== */
+.profile-banner {
+    background: linear-gradient(135deg, #E0F2FE 0%, #EFF6FF 100%);
+    border: 1px solid #BAE6FD;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.banner-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.patient-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.patient-headline h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -0.5px;
+}
+
+.meta-badges {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.meta-tag {
+    background: #FFFFFF;
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0369A1;
+    border: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tag-sec {
+    color: #64748B;
+}
+
+.banner-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.brand-block {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.brand-logo {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+
+.brand-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.brand-title {
+    font-size: 24px;    
+    color: #08519b;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   TOP VITALS GRID
+   ========================================================================== */
+.top-vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) minmax(300px, 380px); 
+    gap: 20px;
+    align-items: stretch;
+}
+
+.vital-cell {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-top: 4px solid #2563EB;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+}
+
+.vital-cell-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748B;
+    letter-spacing: 0.05em;
+}
+
+.vital-cell-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 14px;
+}
+
+/* ==========================================================================
+   MIDDLE DASHBOARD LAYOUT
+   ========================================================================== */
+.middle-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    align-items: start;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+}
+
+.expandable-content {
+    overflow: hidden;
+}
+
+.expandable-content.is-collapsed .hide-on-collapse {
+    display: none !important;
+}
+
+.toggle-expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    background: #FFFFFF;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    padding-top: 16px;
+    margin-top: 16px; 
+    cursor: pointer;
+    transition: color 0.2s ease;
+    border-top: 1px solid #F1F5F9;
+}
+
+.toggle-expand-btn:hover {
+    color: #1D4ED8;
+}
+
+.toggle-expand-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.toggle-expand-btn.is-active svg {
+    transform: rotate(180deg);
+}
+
+.right-sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ==========================================================================
+   PRESCRIPTIONS BOX
+   ========================================================================== */
+.prescription-block {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+.prescription-block:last-child {
+    margin-bottom: 0;
+}
+
+.presc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.doc-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.doc-spec {
+    font-size: 13px;
+    color: #64748B;
+}
+
+.presc-date-badge {
+    text-align: right;
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.diag-box {
+    background: #F8FAFC;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    border: 1px solid #E2E8F0;
+}
+
+.diag-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748B;
+}
+
+.diag-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0369A1;
+    margin-top: 4px;
+}
+
+.med-bullets {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bullet-item {
+    font-size: 13px;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   RIGHT SIDEBAR ELEMENTS
+   ========================================================================== */
+.side-card-chronic { 
+    border-top: 4px solid #2563EB; 
+    min-height: 140px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+.side-card-allergies { border-left: 4px solid #DC2626; }
+
+.pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.pill-item {
+    background: #EFF6FF;
+    color: #1E40AF;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.allergy-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF5F5;
+    border: 1px solid #FEE2E2;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.allergy-row:last-child { margin-bottom: 0; }
+
+.side-med-row {
+    padding: 14px 0;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-med-row:last-child { border-bottom: none; }
+
+/* ==========================================================================
+   FULL WIDTH DIAGNOSTIC REPORTS
+   ========================================================================== */
+.full-width-reports {
+    width: 100%;
+}
+
+.reports-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 16px;
+}
+
+.report-mini-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F8FAFC;
+    transition: all 0.2s;
+}
+
+.report-mini-card:hover {
+    border-color: #CBD5E1;
+    background: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.view-link {
+    font-size: 13px;
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   MODERN RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    body {
+        padding: 20px;
+    }
+
+    .top-vitals-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .top-vitals-grid .card.side-card-chronic {
+        grid-column: span 2; 
+    }
+
+    .middle-dashboard-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .reports-grid-4 { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px; 
+    }
+
+    .page-container {
+        gap: 16px;
+    }
+
+    .profile-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 24px 16px;
+    }
+
+    .banner-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .patient-headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patient-headline h1 {
+        font-size: 24px;
+    }
+
+    .meta-badges {
+        justify-content: center;
+    }
+
+    .banner-right {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid #BAE6FD;
+        padding-top: 16px;
+    }
+
+    .brand-block {
+        flex-direction: row; 
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .brand-text-group {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .top-vitals-grid { 
+        grid-template-columns: 100% !important; 
+    }
+
+    .top-vitals-grid .card.side-card-chronic {
+        grid-column: span 1 !important;
+    }
+
+    .middle-dashboard-grid {
+        grid-template-columns: 100% !important;
+    }
+
+    .reports-grid-4 { 
+        grid-template-columns: 100% !important; 
+    }
+    
+    .vital-cell {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .vital-cell-value {
+        font-size: 28px;
+    }
+}

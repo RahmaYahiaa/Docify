@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\User\User;
+use Illuminate\Database\Eloquent\Model;
+
+class Prescription extends Model
+{
+
+    protected $fillable = ['doctor_id', 'patient_id', 'notes','diagnosis'];
+
+    public function doctor()
+    {
+        return $this->belongsTo(User::class, 'doctor_id');
+    }
+
+    public function patient()
+    {
+        return $this->belongsTo(User::class, 'patient_id');
+    }
+
+    public function items()
+    {
+        return $this->hasMany(PrescriptionItem::class);
+    }
+    public function requests()
+{
+    return $this->hasMany(PrescriptionRequest::class);
+}
+//tt
+}
